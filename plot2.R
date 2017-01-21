@@ -1,3 +1,7 @@
+#set the environement, close the device and 
+if(dev.cur()!=1){dev.off()}
+Sys.setlocale("LC_TIME","English")
+
 hh<-read.table("household_power_consumption.txt",sep=";",header=TRUE,na.string="?",stringsAsFactors = FALSE)
 hh_time<-hh
 hh_time$Time<-strptime(paste(hh$Date,hh$Time),"%d/%m/%Y %H:%M:%S")
